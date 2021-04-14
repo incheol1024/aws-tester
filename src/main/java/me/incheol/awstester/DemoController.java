@@ -16,7 +16,6 @@ public class DemoController {
 
     @GetMapping("/aws")
     public String aws() throws UnknownHostException {
-        InetAddress inetAddress = InetAddress.getLocalHost();
-        return inetAddress.getHostAddress();
+        return "beta";
     }
 }
