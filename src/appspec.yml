@@ -1,0 +1,18 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /app/aws-tester
+
+hooks:
+  BeforeInstall:
+    - location: scripts/checkExistFiles.sh
+  AfterInstall:
+    - location: scripts/package.sh
+      timeout: 180
+  ApplicationStart:
+    - location: scripts/restartServer.sh
+  ValicationService:
+    - location: scripts/validationService.sh
+      timeout: 30
+      runas: ec2-user
