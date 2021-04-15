@@ -15,4 +15,5 @@ else
   echo "===no application kill==="
 fi
 
-java -jar $app_path/target/"$app_name"
+java -jar $app_path/target/"$app_name" > /dev/null 2>&1 &
+exit 0

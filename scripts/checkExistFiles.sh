@@ -9,6 +9,7 @@ else
   echo "Not exist files"
 fi
 
+exit 0
 
 
 
