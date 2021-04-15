@@ -1,12 +1,12 @@
-file=/app/aws-tester/
-if [ -e $file ]; then
-  cd $file
-  echo "============file exist============"
+export app_path=/app/aws-tester/
+if [ -e $app_path ]; then
+  cd $app_path
+  echo "============app_path exist============"
   ls -al
-  echo "===========delete files==========="
+  echo "===========delete app_paths==========="
   rm -rf /app/aws-tester/*
 else
-  echo "Not exist files"
+  echo "Not exist app_paths"
 fi
 
 exit 0

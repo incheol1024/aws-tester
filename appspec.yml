@@ -7,11 +7,14 @@ files:
 hooks:
   BeforeInstall:
     - location: scripts/checkExistFiles.sh
+    - location: scripts/changeOwner.sh
   AfterInstall:
     - location: scripts/package.sh
       timeout: 180
+      runas: ec2-user
   ApplicationStart:
     - location: scripts/restartServer.sh
+      runas: ec2-user
   ValicationService:
     - location: scripts/validationService.sh
       timeout: 30
